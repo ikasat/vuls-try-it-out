@@ -1,0 +1,20 @@
+version: '3'
+services:
+  centos7:
+    build: dockerfiles/centos7
+    volumes:
+      - ./data:/data
+    ports:
+      - '2222:22'
+    command: '/bin/bash /data/init.sh'
+    cap_add:
+      - SYS_PTRACE  # for fast-root or deep scan
+  debian9:
+    build: dockerfiles/debian9
+    volumes:
+      - ./data:/data
+    ports:
+      - '2223:22'
+    command: '/bin/bash /data/init.sh'
+    cap_add:
+      - SYS_PTRACE  # for fast-root or deep scan

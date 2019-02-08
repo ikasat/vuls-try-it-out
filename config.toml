@@ -1,0 +1,22 @@
+[servers.centos7]
+host = "localhost"
+port = "2222"
+user = "vuls"
+keyPath = "keys/id_ecdsa"
+scanMode = ["fast"]
+#cpeNames = [
+#    "cpe:2.3:a:nginx:nginx:1.15.2:*:*:*:*:*:*:*"
+#]
+#containersIncluded = ["${running}"]
+
+[servers.debian9]
+host = "localhost"
+port = "2223"
+user = "vuls"
+keyPath = "keys/id_ecdsa"
+scanMode = ["fast"]
+
+#[slack]
+#hookURL = "https://hooks.slack.com/services/..."
+#authUser = "..."
+#channel = "#..."
